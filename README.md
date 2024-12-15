@@ -35,7 +35,7 @@ Double-click `run.bat` to start the keylogger. This will show a console window.
 Double-click `backgroundStart.vbs` to start the keylogger silently in the background.
 
 ### Log Files
-Logs are saved in the same directory with the format:
+Logs are saved in the **logs** directory with the format:
 `keylog-[start-datetime]_[end-datetime].txt`
 
 ## Important Notice
